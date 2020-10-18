@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1 class="toppad">Looking for a job? Hiring Engineers?</h1>
+    <h2 class="toppad">Register with Sage Recruiting today!</h2>
+    <div class="form-inline justify-content-center toppad">
+        <form action="/register" method="post">
+            <input id="email" name="email" type="text" placeholder="Enter Email: ">
+            <input id="email" name="name" type="text" placeholder="Enter Name: ">
+            <input id="submit" type="submit" disabled>
+        </form>
+    </div>
+    <script>
+        document.querySelector('#email').onkeyup = function() {
+            if (document.querySelector('#email').value == " ") {
+                document.querySelector('#submit').disabled = true;
+            }
+            else {
+                document.querySelector('#submit').disabled = false;
+            }
+        }
+    </script>
+
+{% endblock %}
