@@ -47,3 +47,6 @@ def register():
         # s.send_message(msg)
         # s.quit()
         return render_template("response.html", name=name, email=email, subject=subject, message=message)
+
+if __name__ == '__main__':
+    app.run(threaded=True, port=5000)
