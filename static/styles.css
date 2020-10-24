@@ -1,20 +1,13 @@
 .center {
     text-align: center;
-    color: #326ecf;
+    color: black;
 }
+
 
 .toppad {
   padding-top: 50px;
   text-align: center;
-  color: #326ecf;
-}
-
-.background {
-    background-image: url('me.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 1500px;
-    background-size: cover;
+  color: black;
 }
 
 .button-fix {
@@ -31,7 +24,7 @@ body, html {
 }
 .bg {
   /* The image used */
-  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
+  background-image: url("jpegs/img.background.jpg");
 
   /* Full height */
   height: 100%;
@@ -64,3 +57,23 @@ body, html {
   background: #007bb5;
   color: white;
 }
+
+.formbg {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.bgcover {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5)
+}
+@media (min-width: 768px) {
+  .carousel-multi-item-2 .col-md-3 {
+  float: left;
+  width: 25%;
+  max-width: 100%; } }
+  
+  .carousel-multi-item-2 .card img {
+  border-radius: 2px; }
+
+  

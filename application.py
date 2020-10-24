@@ -1,9 +1,11 @@
-from cs50 import SQL
 from flask import Flask, render_template, request
+import sqlite3
+
+# import smtplib
+# from email.message import EmailMessage
+
 
 app = Flask(__name__)
-
-db= SQL("sqlite:///website.db")
 
 @app.route("/")
 def index():
@@ -28,5 +30,20 @@ def register():
     else:
         name = request.form.get("name")
         email = request.form.get("email")
-        db.execute("INSERT into registrants (name, email) VALUES (:name, :email)", name=name, email=email)
-        return render_template("response.html", email=email, name=name)
+        subject = request.form.get("subject")
+        message = request.form.get("message")
+        conn = sqlite3.connect('website.db')
+        c = conn.cursor() 
+        c.execute("INSERT into registrants (name, email, subject, message) VALUES (?, ?, ?, ?)", (name, email, subject, message))
+        conn.commit()
+        conn.close()
+        # msg = EmailMessage()
+        # msg.set_content(message)
+        # msg['Subject'] = subject
+        # msg['From'] = "ashley@sagerecruiting.me"
+        # msg['To'] = "ashley@sagerecruiting.me"
+        # # Send the message via our own SMTP server.
+        # s = smtplib.SMTP('localhost')
+        # s.send_message(msg)
+        # s.quit()
+        return render_template("response.html", name=name, email=email, subject=subject, message=message)
