@@ -1,128 +1,234 @@
 {% extends "layout.html" %}
 
-{% block body %}
-
-<h1 class="toppad"> Welcome to my page of pics! </h1>
-<!--Carousel Wrapper-->
-<div id="multi-item-example" class="carousel slide carousel-multi-item carousel-multi-item-2" data-ride="carousel">
-
-    <!--Controls-->
-    <div class="controls-top toppad">
-      <a class="black-text" href="#multi-item-example" data-slide="prev"><i class="fas fa-angle-left fa-3x pr-3"></i></a>
-      <a class="black-text" href="#multi-item-example" data-slide="next"><i class="fas fa-angle-right fa-3x pl-3"></i></a>
-    </div>
-    <!--/.Controls-->
-  
-    <!--Slides-->
-    <div class="carousel-inner" role="listbox">
-  
-      <!--First slide-->
-      <div class="carousel-item active">
-  
-        <div class="col-md-3 mb-3">
-          <div class="card">
-            <img class="img-fluid" src="/static/jpegs/img11.jpg"
-              alt="Card image cap">
-          </div>
-        </div>
-  
-        <div class="col-md-3 mb-3">
-          <div class="card">
-            <img class="img-fluid" src="/static/jpegs/img12.jpg"
-              alt="Card image cap">
-          </div>
-        </div>
-  
-        <div class="col-md-3 mb-3">
-          <div class="card">
-            <img class="img-fluid" src="/static/jpegs/img7.jpg"
-              alt="Card image cap">
-          </div>
-        </div>
-  
-        <div class="col-md-3 mb-3">
-          <div class="card">
-            <img class="img-fluid" src="/static/jpegs/img5.jpg"
-              alt="Card image cap">
-          </div>
-        </div>
-  
-      </div>
-      <!--/.First slide-->
-  
-      <!--Second slide-->
-      <div class="carousel-item">
-  
-        <div class="col-md-3 mb-3">
-          <div class="card">
-            <img class="img-fluid" src="/static/jpegs/sis.jpg"
-              alt="Card image cap">
-          </div>
-        </div>
-  
-        <div class="col-md-3 mb-3">
-          <div class="card">
-            <img class="img-fluid" src="/static/jpegs/artsywed2.jpg"
-              alt="Card image cap">
-          </div>
-        </div>
-  
-        <div class="col-md-3 mb-3">
-          <div class="card">
-            <img class="img-fluid" src="/static/jpegs/artsywed.jpg"
-              alt="Card image cap">
-          </div>
-        </div>
-  
-        <div class="col-md-3 mb-3">
-          <div class="card">
-            <img class="img-fluid" src="/static/jpegs/me2.jpg"
-              alt="Card image cap">
-          </div>
-        </div>
-  
-      </div>
-      <!--/.Second slide-->
-  
-      <!-- Third slide
-      <div class="carousel-item">
-  
-        <div class="col-md-3 mb-3">
-          <div class="card">
-            <img class="img-fluid" src="/static/jpegs/artsywed11.jpg"
-              alt="Card image cap">
-          </div>
-        </div>
-  
-        <div class="col-md-3 mb-3">
-          <div class="card">
-            <img class="img-fluid" src="/static/jpegs/artsywed10.jpg"
-              alt="Card image cap">
-          </div>
-        </div>
-  
-        <div class="col-md-3 mb-3">
-          <div class="card">
-            <img class="img-fluid" src="/static/jpegs/artsywed9.jpg"
-              alt="Card image cap">
-          </div>
-        </div>
-  
-        <div class="col-md-3 mb-3">
-          <div class="card">
-            <img class="img-fluid" src="/static/jpegs/artsywed8.jpg"
-              alt="Card image cap">
-          </div>
-        </div>
-  
-      </div>
-      <!--/.Third slide-->
-  
-    </div>
-    <!--/.Slides-->
-  
-  </div> -->
-  <!--/.Carousel Wrapper-->
+{% block customcss %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" media="screen">
+<style>
+#demo {
+  height:100%;
+  position:relative;
+  overflow:hidden;
+}
+.green {
+  background-color:#6fb936;
+}
+.thumb {
+  margin-bottom: 30px;
+}
+.page-top {
+  margin-top:85px;
+}
+img.zoom {
+  width: 100%;
+  height: 200px;
+  border-radius:5px;
+  object-fit:cover;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+}
+.transition {
+  -webkit-transform: scale(1.2); 
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.modal-header {
+  border-bottom: none;
+}
+.modal-title {
+  color:#000;
+}
+.modal-footer{
+  display:none;  
+}
+</style>
 {% endblock %}
 
+{% block body %}
+ <!-- Page Content -->
+ <div class="container page-top">
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+      <a href="/static/jpegs/artsywed1.jpg" data-fancybox class="fancybox" rel="ligthbox">
+        <img src="/static/jpegs/artsywed1.jpg" class="zoom img-fluid " alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+      <a href="/static/jpegs/artsywed2.jpg" data-fancybox class="fancybox" rel="ligthbox">
+        <img src="/static/jpegs/artsywed2.jpg" class="zoom img-fluid " alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+      <a href="/static/jpegs/artsywed5.jpg" data-fancybox class="fancybox" rel="ligthbox">
+        <img src="/static/jpegs/artsywed5.jpg" class="zoom img-fluid " alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+      <a href="/static/jpegs/artsywed7.jpg" data-fancybox class="fancybox" rel="ligthbox">
+        <img src="/static/jpegs/artsywed7.jpg" class="zoom img-fluid " alt="">
+      </a>
+    </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 thumb">
+          <a href="/static/jpegs/tacome.jpg" data-fancybox class="fancybox" rel="ligthbox">
+            <img src="/static/jpegs/tacome.jpg" class="zoom img-fluid " alt="">
+          </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 thumb">
+        <a href="/static/jpegs/Luna.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/Luna.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      
+      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/Lake.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/Lake.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      
+      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/house.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/house.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
 
+      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/wed1.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/wed1.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/wed2.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/wed2.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/wed3.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/wed3.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/artsywed4.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/artsywed4.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      
+       <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/MarkMe.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/MarkMe.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      
+       <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/Paris.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/Paris.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      
+       <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/japan.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/japan.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      
+       <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/deerandme.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/deerandme.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/artsywed6.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/artsywed6.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/sis.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/sis.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/MarkStacey.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/MarkStacey.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/ReganMe.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/ReganMe.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/kiss.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/kiss.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/Mark.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/Mark.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/puppies.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/puppies.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/momme.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/momme.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/charlieme.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/charlieme.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/travelme" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/travelme.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/allyme.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/allyme.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/fangme.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/fangme.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/mark3.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/mark3.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/lake2.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/lake2.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/markme2.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/markme2.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="/static/jpegs/surfer.jpg" data-fancybox class="fancybox" rel="ligthbox">
+          <img src="/static/jpegs/surfer.jpg" class="zoom img-fluid " alt="">
+        </a>
+      </div>
+ </div>
+{% endblock %}
+
+{% block afterbootstrap %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<script type="">
+$(document).ready(() => {
+  $(".zoom").hover(() => {
+    $(this).addClass('transition');
+	}, () => {    
+    $(this).removeClass('transition');
+	});
+});
+</script>
+{% endblock %}
