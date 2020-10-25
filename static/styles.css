@@ -3,10 +3,6 @@
     color: black;
 }
 
-.padd {
-  padding: 50px 200px 75px;
-  text-align: center; 
-}
 .toppad {
   padding-top: 50px;
   text-align: center;
@@ -23,7 +19,6 @@
 
 body, html {
   height: 100%;
-  width: 100%;
   background-color: #dad3d380;
   
 }
